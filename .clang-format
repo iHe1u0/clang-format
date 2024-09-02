@@ -6,10 +6,21 @@ AlignAfterOpenBracket: AlwaysBreak                # Always break after an open b
 AllowAllConstructorInitializersOnNextLine: false  # Do not allow all constructor initializers on the next line
 AllowAllParametersOfDeclarationOnNextLine: false  # Do not allow all parameters of declaration on the next line
 AlignConsecutiveAssignments: true
+AlignConsecutiveBitFields: false
 AlignConsecutiveDeclarations: true                # Align consecutive declarations
 AlignConsecutiveMacros: true                      # Align consecutive macros
 AllowShortCaseLabelsOnASingleLine: true           # Allow short case labels on a single line
-AllowShortFunctionsOnASingleLine: None            # Do not allow short functions on a single line
+# 允许短的函数放在同一行
+# - None: 
+# - InlineOnly: 定义在类中
+# - Empty: 空函数
+# - Inline: 定义在类中，空函数
+# - All: 
+AllowShortFunctionsOnASingleLine: All
+
+# 允许 lambda 在一行中, 同上, 建议 All
+AllowShortLambdasOnASingleLine: All
+
 AllowShortIfStatementsOnASingleLine: Never        # Do not allow short if statements on a single line
 AllowShortLoopsOnASingleLine: true                # Allow short loops on a single line
 BreakBeforeBraces: Allman                         # Break before braces in Allman style
